@@ -13,6 +13,10 @@ hooks:
       - location: scripts/nginx.sh
         timeout: 300
         runas: ubuntu
+      - location: scripts/gunicorn.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStart:
       - location: scripts/start_app.sh
         timeout: 300
         runas: ubuntu
