@@ -8,3 +8,8 @@ hooks:
       - location: scripts/before_install.sh
   AfterInstall:
       - location: scripts/after_install.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/nginx.sh
+        timeout: 300
+        runas: ubuntu
