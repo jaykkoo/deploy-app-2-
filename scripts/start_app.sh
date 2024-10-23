@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["3.91.82.56"]/' /home/ubuntu/django-aws_cicd/awscicd/settings.py
+sed -i 's/\[]/\["35.172.213.192"]/' /home/ubuntu/django-aws_cicd/awscicd/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     
