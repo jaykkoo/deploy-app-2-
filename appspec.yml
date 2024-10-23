@@ -10,10 +10,20 @@ hooks:
       - location: scripts/after_install.sh
         timeout: 300
         runas: ubuntu
-      - location: scripts/nginx.sh
+      - location: scripts/instance_os_dependencies.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/python_dependencies.sh
         timeout: 300
         runas: ubuntu
       - location: scripts/gunicorn.sh
+        timeout: 300
+        runas: ubuntu
+      - location: scripts/nginx.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStop:
+      - location: scripts/stop_app.sh
         timeout: 300
         runas: ubuntu
   ApplicationStart:
